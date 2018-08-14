@@ -1,0 +1,156 @@
+
+body{
+  margin: 0;
+  padding: 0;
+}
+.navbar.solid {
+  background-color: #000019;
+
+  transition: background-color 0.3s ease 0s;
+  box-shadow: 0 0 4px grey;}
+
+  .navbar .nav-item {
+
+    padding-right: 1.4rem; }
+
+
+   header{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 9;
+
+   }
+   .single-slider{
+     background-image: url(../img/3.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vh;
+   }
+   .single-slider2{
+     background-image: url(../img/2.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vh;
+   }
+   .single-slider3{
+     background-image: url(../img/1.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vh;
+   }
+  .slider-title{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    .table-cell{
+      display: table-cell;
+      vertical-align: middle;
+
+
+      }
+
+    .table-cell h1{
+      color: #fff;
+      letter-spacing: 0.35rem;
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+
+
+
+
+  }
+
+.owl-dots{
+  display: none;
+}
+
+
+
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 111;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align:center;
+  }
+
+  .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+
+  }
+
+  .sidenav a:hover{
+      color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+  /*   C O U N T E R     S E C T I O N     */
+
+  .mt-50{
+    margin-top: 70px;
+  }
+   #counter-section{
+     width: 100%;
+     height: auto;
+
+      .counter-header{
+        font-family: 'Dosis', sans-serif;
+
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+        margin-left: 0;
+
+      }
+
+      .card{
+        box-shadow: 0 40px 110px rgba(0, 0, 0, 0.45);
+        border: 1px solid #fff;
+      }
+   }
+
+  /*    A B O U T     S E C T I O N     */
+
+  #about{
+    width: 100%;
+    height: auto;
+
+        .about-header h2{
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          border-bottom: 1px solid #d3d3d3;
+        }
+  }
