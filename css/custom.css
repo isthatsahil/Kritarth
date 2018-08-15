@@ -61,6 +61,9 @@ body{
 
     .sidenav a {
       font-size: 18px; } }
+
+
+    
   /*   C O U N T E R     S E C T I O N     */
   .mt-50 {
     margin-top: 70px; }
@@ -110,3 +113,40 @@ header {
         letter-spacing: 0.1rem;
 
       }
+
+
+      /*    G A L L E R Y     S E C T I O N   */
+
+       .pb-60{
+         padding-bottom: 60px;
+       }
+       .mt-20{
+         margin-top: 20px;
+       }
+
+        #gallery{
+          width: 100%;
+          height: auto;
+        }
+        #gallery-header{
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+
+          margin-top: 80px;
+        font-family: 'Dosis', sans-serif;
+
+        }
+        #gallery-header span{
+          font-weight: lighter;
+          font-size: 3rem;
+            letter-spacing: 0.25rem;
+        }
+          #gallery-header b{
+            font-size: 3rem;
+          }
+
+        #gallery-sub{
+          margin-left: auto;
+          margin-right: auto;
+        }
