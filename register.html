@@ -153,15 +153,73 @@
            <div class="form-row">
              <div class="col-md-12 form-group">
 
-               <label for="college">College</label>
-                 <select class="form-control" id="gender">
+               <label for="college">Institution</label>
+                 <select class="form-control" id="myOptions" >
+                    <option>select one</option>
                      <option>Kalinga Institute of Industrial Technology</option>
-                     <option>Silicon University</option>
-                      <option>SOA,University</option>
-                       <option>IIIT,Bhubaneshwar</option>
+                     <option>Institute of Management And Information Science</option>
+                      <option>Silicon Institute of Technology</option>
+                       <option>Trident Academy of Technology</option>
+                       <option>Amity College of Engineering</option>
+                        <option>Arya School of Management & Information Technology</option>
+                         <option>C. V. Raman College of Engineering</option>
+                          <option>Institute of Management And Advance Global Excellence </option>
+                           <option>Indian Institute of Science & Information Technology</option>
+                            <option>Xavier Institute of Management </option>
+                             <option>ITER SOA Unsiversity</option>
+                              <option >Others</option>
+
                  </select>
+             </div>
+             <div class="col form-group" >
+               <input type="text" class="form-control " style="display:none"  placeholder="Institution Name"  id="others">
+             </div>
+           </div>
+           <div class="form-row">
+             <div class="col-md-4 form-group">
+               <label for="event1">Select Events</label>
+                 <select class="form-control" id="event1">
+                    <option>Event One</option>
+                     <option>Kautuhal</option>
+                     <option>Rocket Singh</option>
+                      <option>Klick It</option>
+                       <option>Devil's Advocate</option>
+                       <option>Kritarth's Got Talent</option>
+                        <option>Kanvassing</option>
+                         <option>Hooch High</option>
+                          <option>Klimax</option>
+                           <option>Ignite</option>
+                       </select>
+             </div>
+             <div class="col-md-4 form-group">
 
+                 <select class="form-control " id="event2" style="margin-top: 30px">
+                    <option>Event Two (Optional)</option>
+                     <option>Kautuhal</option>
+                     <option>Rocket Singh</option>
+                      <option>Klick It</option>
+                       <option>Devil's Advocate</option>
+                       <option>Kritarth's Got Talent</option>
+                        <option>Kanvassing</option>
+                         <option>Hooch High</option>
+                          <option>Klimax</option>
+                           <option>Ignite</option>
+                       </select>
+             </div>
+             <div class="col-md-4 form-group">
 
+                 <select class="form-control" id="event3" style="margin-top: 30px">
+                    <option>Event Three (Optional)</option>
+                     <option>Kautuhal</option>
+                     <option>Rocket Singh</option>
+                      <option>Klick It</option>
+                       <option>Devil's Advocate</option>
+                       <option>Kritarth's Got Talent</option>
+                        <option>Kanvassing</option>
+                         <option>Hooch High</option>
+                          <option>Klimax</option>
+                           <option>Ignite</option>
+                       </select>
              </div>
            </div>
            <div class="form-row">
@@ -222,6 +280,16 @@
      }
 
  }
+ $('#myOptions').change(function() {
+   console.log("hello");
+  var val = $("#myOptions option:selected").text();
+  if(val=="Others"){
+    $('#others').css("display","block");
+  }
+  else{
+    $('#others').css("display","none");
+  }
+});
 
   </script>
    </body>
