@@ -20,15 +20,16 @@
      <!--   L  O C A L     C S S     -->
 <link rel="stylesheet" href="css\custom.css">
 <link rel="stylesheet" href="css\school.css">
-
+<link rel="stylesheet" href="css\indexer.css">
 <link rel="stylesheet" href="css\portfolio.css">
+
 </head>
   <body>
 
 
-    <header>
+ <header>
       <!--  NAVBAR -->
-      <nav class="navbar navbar-expand-md fixed-top   navbar-dark  py-2">
+      <nav class="navbar navbar-expand-md fixed-top   navbar-dark  py-2" id="nav">
          <div class="container">
            <a href="index.html" class="navbar-brand">
              <img src="img\kritarth white.png" alt="" width="180" height="60">
@@ -39,28 +40,28 @@
          <div class="d-lg-block d-none">
            <ul class="navbar-nav ml-auto">
              <li class="nav-item">
-               <a href="#home" class="nav-link text-white"><i class="fas fa-home mr-1"></i>Home</a>
+               <a href="#myCarousel" class="nav-link text-white"><i class="fas fa-home mr-1"></i>Home</a>
              </li>
              <li class="nav-item">
-               <a href="#event" class="nav-link text-white"><i class="far fa-calendar-alt  mr-1"></i>Event</a>
+               <a href="#first-sem" class="nav-link text-white"><i class="far fa-calendar-alt  mr-1"></i>Event</a>
              </li>
              <li class="nav-item">
-               <a href="#event" class="nav-link text-white"><i class="far fa-calendar-alt  mr-1"></i>About us</a>
+               <a href="#about" class="nav-link text-white"><i class="far fa-calendar-alt  mr-1"></i>About us</a>
              </li>
              <li class="nav-item">
-               <a href="#slideshow" class="nav-link text-white"><i class="fas fa-images mr-1"></i>Gallery</a>
+               <a href="#portfolio" class="nav-link text-white"><i class="fas fa-images mr-1"></i>Gallery</a>
              </li>
 
              <li class="nav-item">
-               <a href="#register" class="nav-link text-white"><i class="far fa-user  mr-1"></i>Register</a>
+               <a href="register.html" class="nav-link text-white"><i class="far fa-user  mr-1"></i>Register</a>
              </li>
 
            </ul>
              </div>
              </div>
        </nav>
+</header>
 
-      </header>
       <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">About</a>
@@ -334,30 +335,12 @@ This event is all about testing your knowledge regarding it and how to call it q
 </div>
 </div>
 </div>
-<!--<div class="col-lg-4">
-<div class="card-container">
-<div class="card">
-<div class="front">
-  <h2 class="sub-title">Event-VIII</h2>
-  <h1 class="title">
-  Klimax
-  </h1>
-  <img class="image" src="http://pre14.deviantart.net/0aef/th/pre/f/2014/015/2/f/look_at_that_thing_morty____rick_and_morty_by_kory226-d72a6ub.png" alt="" />
-</div>
-<div class="back">
-  <h3 class="synopsis">Description</h3>
-  <p>Every person has various shades and each shade is there well hidden within ourselves which come up to the surface only when the time is right and the need is such. Here is your chance to single handedly help...</p>
 
-    <a href="evs.html" target="_blank"><div class="btn-school mb-2"><i class="fab fa-readme"></i>Read More</div></a>
-</div>
-</div>
-</div>
-</div> -->
 <div class="col-lg-4">
 <div class="card-container">
 <div class="card">
 <div class="front">
-  <h2 class="sub-title">Event-VIII/h2>
+  <h2 class="sub-title">Event-VIII</h2>
   <h1 class="title">
   Ignite (Start-Up Event)
   </h1>
@@ -376,9 +359,15 @@ Giving is not just about making a donation but making a difference and we want y
 </div>
 </div>
 </section>
+<!-- Go to Top Button -->
+
+  <a href="#" id="c-go-top" class="c-go-top">
+      <i class="fa fa-arrow-up fa-fw"></i>
+    </a>
 
 
 
+    <!-- Gallery  -->
          <section id="portfolio" class="bg-light pb-60">
            <div class="row ">
              <div class="col-md-12">
@@ -541,6 +530,7 @@ Giving is not just about making a donation but making a difference and we want y
 
 
 
+
   <!--   B O O T S T R A P   JS, JQEURY  POPPER.JS     -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -556,63 +546,19 @@ Giving is not just about making a donation but making a difference and we want y
 
      <script src="js\main.js"></script>
        <script src="js\texture.js"></script>
+       <script src="js\homie.js" ></script>
 
-<script type="text/javascript">
-
+<script>
 //AOS INIT
 
 AOS.init();
 
 
 
-$('.carousel').carousel({
-   interval: 3000,
-   keyboard: false,
-   pause: false,
-   ride: 'carousel',
-   wrap: true
- });
-
-
-             function openNav() {
-     document.getElementById("mySidenav").style.width = "100%";
- }
-
-     function closeNav() {
-     document.getElementById("mySidenav").style.width = "0";
-        }
 
 
 
-        /* Portfolio Filter */
 
- initWorkFilter = function() {
-   var filter, filterBlock, isotope_mode, itemSelector;
-   filter = 0;
-   filterBlock = $('.work-container');
-   itemSelector = '.work-item';
-   isotope_mode = 'masonry';
-   filterBlock.imagesLoaded(function() {
-     filterBlock.isotope({
-       itemSelector: itemSelector,
-       layoutMode: isotope_mode,
-       filter: filter
-     });
-   });
-   $('.filter li a').on('click', function() {
-     $('.filter li').removeClass('active');
-     $(this).parent().addClass('active');
-     filter = $(this).attr('data-filter');
-     filterBlock.isotope({
-       itemSelector: itemSelector,
-       layoutMode: isotope_mode,
-       filter: filter
-     });
-     return false;
-   });
- };
-
- initWorkFilter();
 </script>
 
 

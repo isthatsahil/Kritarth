@@ -22,13 +22,14 @@
      <!--   L  O C A L     C S S     -->
 
 <link rel="stylesheet" href="..\css\event.css">
+<link rel="stylesheet" href="..\css\indexer.css">
 
 </head>
  </head>
  <body>
-
+<header>
    <!--  NAVBAR -->
-   <nav class="navbar navbar-expand-md fixed-top  bg-light navbar-light  ">
+   <nav class="navbar navbar-expand-md fixed-top  bg-light navbar-light  " id="nav">
       <div class="container">
         <a href="index.html" class="navbar-brand">
           <img src="..\img\kritarth.png" alt="" width="180" height="60">
@@ -42,19 +43,25 @@
             <a href="..\index.html" class="nav-link text-dark ml-2"><i class="fas fa-home mr-1"></i>Home</a>
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link text-dark ml-2"><i class="fas fa-bullseye  mr-1"></i>Rules</a>
+            <a href="#sub-section" class="nav-link text-dark ml-2"><i class="fas fa-bullseye  mr-1"></i>Rules</a>
           </li>
-          <li class="nav-item">
-            <a href="#event" class="nav-link text-dark ml-2"><i class="far fa-calendar-alt  mr-1"></i>About us</a>
-          </li>
+
 
 
         </ul>
           </div>
           </div>
     </nav>
+    </header>
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
     <!-- Devil's Advovcate  Section -->
-    <section id="sub-section">
+    <section id="sub-section" >
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
@@ -79,7 +86,7 @@
             <div class="subject-content">
               <p class="lead text-dark">Not everyone has the charisma or the strength in them to influence people with nothing but words,
                 not everyone can get into their minds and change their well thought notions and make them unlearn and change their beliefs!
-                If you think you have such power then we call out to you to help us 
+                If you think you have such power then we call out to you to help us
                 bring the change we look forward to in reference to the illegal abuse that is increasing day after day.</p>
               <a id="enroll-btn" href="#" class="btn btn-outline-dark ">Register Now -></a>
             </div>
@@ -271,6 +278,26 @@
 <script src="..\js\main.js">
 
 </script>
-    <script src="..\js\stunning.js" charset="utf-8"></script>
+  <script>
+  //For smooth scrolling
+  $('#nav a').on('click', function (e) {
+      // Check for a hash value
+      if (this.hash !== '') {
+        // Prevent default behavior
+        e.preventDefault();
+
+        // Store hash
+        const hash = this.hash;
+
+        // Animate smooth scroll
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+          // Add hash to URL after scroll
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
    </body>
  </html>

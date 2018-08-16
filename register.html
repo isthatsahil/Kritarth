@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kritarth |REGISTER</title>
+    <!-- F O N T     I C O N S  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!--  G O O G L E    F O N T S  -->
+     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!-- B O O T S T R A P     C S S   -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+
+
+     <!--   L  O C A L     C S S     -->
+<link rel="stylesheet" href="css\register.css">
+ <link rel="stylesheet" href="css\indexer.css">
+
+</head>
+ </head>
+ <body>
+<header>
+   <!--  NAVBAR -->
+   <nav class="navbar navbar-expand-md fixed-top  navbar-light  " id="nav">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="..\img\kritarth white.png" alt="" width="180" height="60">
+        </a>
+          <div class="ml-auto d-lg-none d-md-block">
+            <span style="font-size:30px;cursor:pointer" class="text-white" onclick="openNav()">&#9776;</span>
+          </div>
+      <div class="d-lg-block d-none">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="..\index.html" class="nav-link text-white ml-2"><i class="fas fa-home mr-1"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#sub-section" class="nav-link text-white ml-2"><i class="fas fa-bullseye  mr-1"></i>Register</a>
+          </li>
+
+
+
+        </ul>
+          </div>
+          </div>
+    </nav>
+    </header>
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+  <!-- Go to Top Button -->
+
+    <a href="#" id="c-go-top" class="c-go-top">
+        <i class="fa fa-arrow-up fa-fw"></i>
+      </a>
+
+<!--  OVERLAY AREA -->
+     <section id="reg-head">
+       <div class="overlay">
+         <div class="container inner-content">
+           <div class="row">
+               <div class="col-md-12">
+                 <div class="title">
+                   <div class="loader" id="loader"></div>
+
+
+                 </div>
+               </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+
+     <section id="contact" class="py-3 ">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-12">
+         <div class="form-header my-4">
+           <h1 class="display-3 text-center">Register Here</h1>
+         </div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-md-4">
+         <div class="card p-4" id="offline">
+           <div class="card-body">
+             <h4>Get In Touch</h4>
+             <p>For any queries and offline registration</p>
+             <h4>Address</h4>
+             <p>KIIT Student Activity Center</p>
+             <h4>Email</h4>
+             <p>kritarth@gmail.com</p>
+             <h4>Phone</h4>
+             <p>+91-7024711773</p>
+           </div>
+         </div>
+       </div>
+       <div class="col-md-8">
+         <div class="card p-4" id="reg-on">
+           <div class="card-body">
+             <h3 class="text-center">Please fill out this form to register.</h3>
+             <hr>
+             <div class="row">
+               <div class="col-md-6">
+                 <div class="form-group">
+                   <input type="text" class="form-control" placeholder="First Name">
+                 </div>
+                 </div>
+                 <div class="col-md-6">
+                   <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Last Name">
+                   </div>
+               </div>
+               <div class="col-md-6">
+                 <div class="form-group">
+                   <input type="email" class="form-control" placeholder="Email">
+                 </div>
+             </div>
+             <div class="col-md-6">
+               <div class="form-group">
+                 <input type="number" class="form-control" placeholder="Phone Number">
+               </div>
+           </div>
+           </div>
+           <div class="form-row">
+             <div class="col-md-12 form-group">
+
+               <label for="qualification">Qualification</label>
+                 <select class="form-control" id="qualification" onchange="myFunction()">
+                     <option>Select One</option>
+                     <option>College</option>
+                     <option>Student</option>
+                </select>
+
+
+             </div>
+             <div class="col form-group">
+               <input type="text" class="form-control" placeholder="Fees" id="fees" readonly>
+             </div>
+           </div>
+           <div class="form-row">
+             <div class="col-md-12 form-group">
+
+               <label for="college">College</label>
+                 <select class="form-control" id="gender">
+                     <option>Kalinga Institute of Industrial Technology</option>
+                     <option>Silicon University</option>
+                      <option>SOA,University</option>
+                       <option>IIIT,Bhubaneshwar</option>
+                 </select>
+
+
+             </div>
+           </div>
+           <div class="form-row">
+             <div class="col-md-12 form-group">
+                  <input type="submit" value="Submit" class="btn btn-outline-danger btn-block">
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+
+<div style="height:500px"></div>
+
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+
+<script src="js\main.js">
+
+</script>
+<script src="js\random.js" ></script>
+  <script>
+  //For smooth scrolling
+  $('#nav a').on('click', function (e) {
+      // Check for a hash value
+      if (this.hash !== '') {
+        // Prevent default behavior
+        e.preventDefault();
+
+        // Store hash
+        const hash = this.hash;
+
+        // Animate smooth scroll
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+          // Add hash to URL after scroll
+          window.location.hash = hash;
+        });
+      }
+    });
+
+    function myFunction() {
+     var x = document.getElementById("qualification").value;
+     console.log(x);
+     if(x=='College'){
+       document.getElementById("fees").value = "200/- ";
+       console.log("Yes");
+     }
+     else{
+        document.getElementById("fees").value = "150/- ";
+     }
+
+ }
+
+  </script>
+   </body>
+ </html>

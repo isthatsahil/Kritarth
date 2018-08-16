@@ -151,33 +151,3 @@ background: linear-gradient(to right, #E1F5C4, #EDE574); /* W3C, IE 10+/ Edge, F
     font-weight: bold;
     letter-spacing: 0.2rem;
   }
-
-  /*   GO TO TOP              */
-  .c-go-top {
-    background: none repeat scroll 0 0 padding-box #1099dd;
-    bottom: 20px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    background: #D46856;
-
-    border-radius: 4px;
-    color: #fff;
-    display: none;
-    font-size: 12px;
-
-    padding: 10px;
-    position: fixed;
-
-    text-decoration: none;
-    z-index: 999;
-  }
-
-  .c-go-top:hover,
-  .c-go-top:focus,
-  .c-go-top:active,
-  .c-go-top:visited {
-    color: #fff;
-    outline: 0;
-    text-decoration: none;
-  }
