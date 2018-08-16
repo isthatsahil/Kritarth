@@ -109,6 +109,9 @@
          </div>
        </div>
        <div class="col-md-8">
+         <form class="" action="index.html" method="post">
+
+
          <div class="card p-4" id="reg-on">
            <div class="card-body">
              <h3 class="text-center">Please fill out this form to register.</h3>
@@ -143,6 +146,8 @@
                      <option>Select One</option>
                      <option>College</option>
                      <option>Student</option>
+                     <option>Corporate</option>
+                     <option>Others</option>
                 </select>
 
 
@@ -216,6 +221,7 @@
            </div>
          </div>
        </div>
+       </form>
      </div>
    </div>
  </section>
@@ -262,8 +268,14 @@
        document.getElementById("fees").value = "200/- ";
        console.log("Yes");
      }
-     else{
-        document.getElementById("fees").value = "150/- ";
+     else if (x=='Student') {
+       document.getElementById("fees").value = "150/- ";
+     }
+     else if (x=='Corporate') {
+         document.getElementById("fees").value = "300/- ";
+     }
+     else if (x=='Others') {
+       document.getElementById("fees").value = "250/- ";
      }
 
  }
