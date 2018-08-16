@@ -116,22 +116,22 @@
              <div class="row">
                <div class="col-md-6">
                  <div class="form-group">
-                   <input type="text" class="form-control" placeholder="First Name">
+                   <input type="text" class="form-control" placeholder="First Name" name="firstName">
                  </div>
                  </div>
                  <div class="col-md-6">
                    <div class="form-group">
-                     <input type="text" class="form-control" placeholder="Last Name">
+                     <input type="text" class="form-control" placeholder="Last Name" name="lastName">
                    </div>
                </div>
                <div class="col-md-6">
                  <div class="form-group">
-                   <input type="email" class="form-control" placeholder="Email">
+                   <input type="email" class="form-control" placeholder="Email" name="email">
                  </div>
              </div>
              <div class="col-md-6">
                <div class="form-group">
-                 <input type="number" class="form-control" placeholder="Phone Number">
+                 <input type="number" class="form-control" placeholder="Phone Number" name="phoneNumber">
                </div>
            </div>
            </div>
@@ -139,7 +139,7 @@
              <div class="col-md-12 form-group">
 
                <label for="qualification">Qualification</label>
-                 <select class="form-control" id="qualification" onchange="myFunction()">
+                 <select class="form-control" id="qualification" onchange="myFunction()" name="qualification">
                      <option>Select One</option>
                      <option>College</option>
                      <option>Student</option>
@@ -148,14 +148,14 @@
 
              </div>
              <div class="col form-group">
-               <input type="text" class="form-control" placeholder="Fees" id="fees" readonly>
+               <input type="text" class="form-control" placeholder="Fees" id="fees" readonly name="fee">
              </div>
            </div>
            <div class="form-row">
              <div class="col-md-12 form-group">
 
                <label for="college">Institution</label>
-                 <select class="form-control" id="myOptions" >
+                 <select class="form-control" id="myOptions"  name="institution">
                     <option>select one</option>
                      <option>Kalinga Institute of Industrial Technology</option>
                      <option>Institute of Management And Information Science</option>
@@ -173,13 +173,13 @@
                  </select>
              </div>
              <div class="col form-group" >
-               <input type="text" class="form-control " style="display:none"  placeholder="Institution Name"  id="others">
+               <input type="text" class="form-control " style="display:none"  placeholder="Institution Name"  id="others" name="otherInstitution">
              </div>
            </div>
            <div class="form-row">
              <div class="col-md-4 form-group">
                <label for="event1">Select Events</label>
-                 <select class="form-control" id="event1">
+                 <select class="form-control" id="event1" name="event1">
                     <option>Event One</option>
                      <option>Kautuhal</option>
                      <option>Rocket Singh</option>
@@ -194,7 +194,7 @@
              </div>
              <div class="col-md-4 form-group">
 
-                 <select class="form-control " id="event2" style="margin-top: 30px">
+                 <select class="form-control " id="event2" style="margin-top: 30px" name="event2">
                     <option>Event Two (Optional)</option>
                      <option>Kautuhal</option>
                      <option>Rocket Singh</option>
@@ -209,7 +209,7 @@
              </div>
              <div class="col-md-4 form-group">
 
-                 <select class="form-control" id="event3" style="margin-top: 30px">
+                 <select class="form-control" id="event3" style="margin-top: 30px" name="event3">
                     <option>Event Three (Optional)</option>
                      <option>Kautuhal</option>
                      <option>Rocket Singh</option>
@@ -225,7 +225,7 @@
            </div>
            <div class="form-row">
              <div class="col-md-12 form-group">
-                  <input type="submit" value="Submit" class="btn btn-outline-danger btn-block">
+                  <input type="submit" value="Submit" class="btn btn-outline-danger btn-block" name="regButton">
              </div>
            </div>
          </div>
