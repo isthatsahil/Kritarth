@@ -1,4 +1,10 @@
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9; }
 
 /*  GO TO TOP  */
 
@@ -65,10 +71,3 @@
 
     .sidenav a {
       font-size: 18px; } }
-
-      header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 9; }
