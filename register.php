@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Kritarth| Register</title>
     <link rel="shortcut icon" type="image/ico" href="kritarth.ico"/>
@@ -218,7 +218,7 @@
          </div>
        </div>
        <div class="col-md-8">
-         <form class="" action="index.html" method="post">
+         <form class="" action="confirmation.html" method="post">
 
 
          <div class="card p-4" id="reg-on">
@@ -329,7 +329,7 @@
            </div>
            <div class="form-row">
              <div class="col-md-12 form-group ">
-               <div class="g-recaptcha d-inline-block " style="margin-left:30%"   data-sitekey="6Lc7bWoUAAAAAGeSiUsGbH7b-o6PwsslEH4Tefgx"></div>
+               <div class="g-recaptcha d-inline-block cap"   data-sitekey="6Lc7bWoUAAAAAGeSiUsGbH7b-o6PwsslEH4Tefgx"></div>
                <!-- SECRET KEY :6Lc7bWoUAAAAAHgW_e7jg7Se0OeuLQcMr9FtU0-Z  -->
                </div>
              <div class="col-md-12 form-group">
