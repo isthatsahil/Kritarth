@@ -15,9 +15,8 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!--   O W L     C S S    -->
-       <link rel="stylesheet" href="css\owl.carousel.min.css">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+     <!--   ANIMATE     C S S    -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
 
 
      <!--   L  O C A L     C S S     -->
@@ -25,24 +24,43 @@
 
      <link rel="stylesheet" href="..\css\event.css">
      <link rel="stylesheet" href="..\css\indexer.css">
-
+     <link rel="stylesheet" href="..\css\preloader.css">
 
 
 
 </head>
  </head>
  <body>
+   <!--  P R E L O A D E R   -->
+   <div class="loader" id="loader-box">
+   <div class="loader-inner">
+     <div class="loader-line-wrap">
+       <div class="loader-line"></div>
+     </div>
+     <div class="loader-line-wrap">
+       <div class="loader-line"></div>
+     </div>
+     <div class="loader-line-wrap">
+       <div class="loader-line"></div>
+     </div>
+     <div class="loader-line-wrap">
+       <div class="loader-line"></div>
+     </div>
+     <div class="loader-line-wrap">
+       <div class="loader-line"></div>
+     </div>
+   </div>
+ </div>
 </header>
    <!--  NAVBAR -->
    <nav class="navbar navbar-expand-md fixed-top   navbar-light  ">
       <div class="container">
-        <a href="index.html" class="navbar-brand">
+        <a href="..\index.html" class="navbar-brand">
           <img src="..\img\kritarth white.png" alt="" width="180" height="60">
         </a>
-          <div class="ml-auto d-lg-none d-md-block">
-            <span style="font-size:30px;cursor:pointer" class="text-white" onclick="openNav()">&#9776;</span>
-          </div>
-      <div class="d-lg-block d-none">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-collapse"><span class="text-white navbar-toggler-icon"></span></button>
+
+     <div class="collapse navbar-collapse  " id="nav-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a href="..\index.html" class="nav-link text-white ml-2"><i class="fas fa-home mr-1"></i>Home</a>
@@ -54,14 +72,10 @@
         </ul>
           </div>
           </div>
-    </nav><header>
+    </nav>
+    <header>
 
 
-      <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="..\index.html" class="mb-2"><i class="fas fa-home mr-1"></i>Home</a>
-<a href="..\register.php" class="mb-2"><i class="far fa-user  mr-1"></i>Register</a>
-    </div>
     <!-- Rocket Singh  Section -->
     <section id="sub-section">
       <div class="container">
@@ -195,30 +209,17 @@
 
 
   <!-- Footer -->
-  <section id="main-footer" class="text-center text-white p-4">
-    <div class="container">
-      <div class="row">
-        <div class="col">
+  <section id="end-footer">
 
+    <div id="footer-social">
+     <a href="#" class="socio"><i class="fab fa-facebook-f"><span >Facebook</span></i></a>
+     <a href="#" class="socio"><i class="fab fa-twitter"><span>Twitter</span></i></a>
+     <a href="#" class="socio"><i class="fab fa-instagram"><span>Instagram</span></i></a>
+     </div>
 
-<!-- M A P  I N T E G R A T I O N-->
-        <!--  <div id="map">
-          <script>
-
-      function initMap() {
-      var options={
-          zoom: 16,
-          center:{lat:20.350623,lng:85.820411}
-         }
-
-         var map = new google.maps.Map(document.getElementById('map'), options);
-        }
-    </script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqSTxfoQ82bQw1eRg2GvIsRlnK-YKHzCQ&callback=initMap"async defer></script>
-      </div>
-    </div>-->
-      </div>
-    </div>
+     <div class="foo-content">
+       <p class="lead text-white text-center">Copyright &copy; KRITARTH</p>
+     </div>
   </section>
 
 
@@ -229,11 +230,17 @@
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js"></script>
-<script src="..\js\main.js">
+<script src="..\js\main.js"></script>
+    <script>
 
-</script>
-    <script src="..\js\stunning.js" charset="utf-8"></script>
+    var overlay = document.getElementById("loader-box");
+
+    window.addEventListener('load', function(){
+      overlay.style.display = 'none';
+    })
+
+
+
+    </script>
    </body>
  </html>

@@ -22,21 +22,136 @@
      <!--   L  O C A L     C S S     -->
 <link rel="stylesheet" href="css\register.css">
  <link rel="stylesheet" href="css\indexer.css">
+<style media="screen">
+.loaders {
+    background: #000;
+    background: radial-gradient(#222, #000);
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
 
+.loaders-inner {
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+
+.loaders-line-wrap {
+    animation:
+    spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
+  ;
+    box-sizing: border-box;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform-origin: 50% 100%;
+    width: 100px;
+}
+.loaders-line {
+    border: 4px solid transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+.loaders-line-wrap:nth-child(1) { animation-delay: -50ms; }
+.loaders-line-wrap:nth-child(2) { animation-delay: -100ms; }
+.loaders-line-wrap:nth-child(3) { animation-delay: -150ms; }
+.loaders-line-wrap:nth-child(4) { animation-delay: -200ms; }
+.loaders-line-wrap:nth-child(5) { animation-delay: -250ms; }
+
+.loaders-line-wrap:nth-child(1) .loaders-line {
+    border-color: hsl(0, 80%, 60%);
+    height: 90px;
+    width: 90px;
+    top: 7px;
+}
+.loaders-line-wrap:nth-child(2) .loaders-line {
+    border-color: hsl(60, 80%, 60%);
+    height: 76px;
+    width: 76px;
+    top: 14px;
+}
+.loaders-line-wrap:nth-child(3) .loaders-line {
+    border-color: hsl(120, 80%, 60%);
+    height: 62px;
+    width: 62px;
+    top: 21px;
+}
+.loaders-line-wrap:nth-child(4) .loaders-line {
+    border-color: hsl(180, 80%, 60%);
+    height: 48px;
+    width: 48px;
+    top: 28px;
+}
+.loaders-line-wrap:nth-child(5) .loaders-line {
+    border-color: hsl(240, 80%, 60%);
+    height: 34px;
+    width: 34px;
+    top: 35px;
+}
+
+@keyframes spin {
+    0%, 15% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
 </head>
  </head>
  <body>
+   <!--  P R E L O A D E R   -->
+   <div class="loaders" id="loaders-box">
+   <div class="loaders-inner">
+     <div class="loaders-line-wrap">
+       <div class="loaders-line"></div>
+     </div>
+     <div class="loaders-line-wrap">
+       <div class="loaders-line"></div>
+     </div>
+     <div class="loaders-line-wrap">
+       <div class="loaders-line"></div>
+     </div>
+     <div class="loaders-line-wrap">
+       <div class="loaders-line"></div>
+     </div>
+     <div class="loaders-line-wrap">
+       <div class="loader-line"></div>
+     </div>
+   </div>
+   </div>
+
 <header>
    <!--  NAVBAR -->
-   <nav class="navbar navbar-expand-md fixed-top  navbar-light  " id="nav">
+   <nav class="navbar navbar-expand-lg fixed-top  navbar-light " id="nav">
       <div class="container">
         <a href="index.html" class="navbar-brand">
           <img src="img\kritarth white.png" alt="" width="180" height="60">
         </a>
-          <div class="ml-auto d-lg-none d-md-block">
-            <span style="font-size:30px;cursor:pointer" class="text-white" onclick="openNav()">&#9776;</span>
-          </div>
-      <div class="d-lg-block d-none">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-collapse"><span class=" navbar-toggler-icon"></span></button>
+
+     <div class="collapse navbar-collapse nav-col " id="nav-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a href="index.html" class="nav-link text-white ml-2"><i class="fas fa-home mr-1"></i>Home</a>
@@ -52,12 +167,7 @@
           </div>
     </nav>
     </header>
-    <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index.html">Home</a>
-  <a href="register.php">Register</a>
-  
-</div>
+
 
   <!-- Go to Top Button -->
 
@@ -237,7 +347,19 @@
  </section>
 
 
-<div style="height:500px"></div>
+ <section id="end-footer">
+
+   <div id="footer-social">
+    <a href="#" class="socio"><i class="fab fa-facebook-f"><span >Facebook</span></i></a>
+    <a href="#" class="socio"><i class="fab fa-twitter"><span>Twitter</span></i></a>
+    <a href="#" class="socio"><i class="fab fa-instagram"><span>Instagram</span></i></a>
+    </div>
+
+    <div class="foo-content">
+      <p class="lead text-white text-center">Copyright <i class="far fa-copyright"></i> KRITARTH</p>
+    </div>
+ </section>
+
 
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -326,6 +448,16 @@
     $('#others').css("display","none");
   }
 });
+
+
+
+var overlay = document.getElementById("loaders-box");
+
+window.addEventListener('load', function(){
+  overlay.style.display = 'none';
+})
+
+
 
   </script>
    </body>
