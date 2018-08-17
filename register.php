@@ -228,18 +228,18 @@
              <div class="row">
                <div class="col-md-12">
                  <div class="form-group">
-                   <input type="text" class="form-control" placeholder="Full Name" name="fulltName">
+                   <input type="text" class="form-control" placeholder="Full Name" name="fulltName" required>
                  </div>
                  </div>
 
                <div class="col-md-6">
                  <div class="form-group">
-                   <input type="email" class="form-control" placeholder="Email" name="email">
+                   <input type="email" class="form-control" placeholder="Email" name="email" required>
                  </div>
              </div>
              <div class="col-md-6">
                <div class="form-group">
-                 <input type="text" class="form-control" placeholder="Phone Number" name="phoneNumber">
+                 <input type="text" class="form-control" placeholder="Phone Number" name="phoneNumber" required>
                </div>
            </div>
            </div>
@@ -247,7 +247,7 @@
              <div class="col-md-12 form-group">
 
                <label for="qualification">Institution</label>
-                 <select class="form-control" id="qualification" name="qualification">
+                 <select class="form-control" id="qualification" name="qualification" required>
                      <option>Select One</option>
                      <option>KIIT</option>
                      <option>School student</option>
@@ -258,13 +258,13 @@
 
              </div>
              <div class="col-lg-12 form-group">
-               <input type="text" class="form-control " style="display:none"  placeholder="Roll No."  id="roll" name="rollNumber">
+               <input type="text" class="form-control " style="display:none"  placeholder="Roll No."  id="roll" name="rollNumber" required>
              </div>
              <div class="col-lg-12 form-group">
-               <input type="text" class="form-control " style="display:none;margin-top:-20px;margin-bottom:30px"  placeholder="School Name"  id="school" name="schoolName">
+               <input type="text" class="form-control " style="display:none;margin-top:-20px;margin-bottom:30px"  placeholder="School Name"  id="school" name="schoolName" required>
              </div>
              <div class="col-lg-12 form-group">
-               <input type="text" class="form-control " style="display:none;margin-top:-30px;margin-bottom:50px"  placeholder="Institution Name"  id="corporate" name="corporateName">
+               <input type="text" class="form-control " style="display:none;margin-top:-30px;margin-bottom:50px"  placeholder="Institution Name"  id="corporate" name="corporateName" required>
              </div>
 
            </div>
@@ -272,7 +272,7 @@
              <div class="col-md-12 form-group">
                  <div id="college" style="display:none;margin-top:-30px;margin-bottom:50px">
                <label for="college">College</label>
-                 <select class="form-control" id="myOptions"  name="institution">
+                 <select class="form-control" id="myOptions"  name="institution" required>
                     <option>Select one</option>
 
                      <option>Institute of Management And Information Science</option>
@@ -291,13 +291,13 @@
                  </div>
              </div>
              <div class="col form-group" >
-               <input type="text" class="form-control " style="display:none;margin-top:-50px;margin-bottom:50px"  placeholder="College Name"  id="others" name="otherInstitution">
+               <input type="text" class="form-control " style="display:none;margin-top:-50px;margin-bottom:50px"  placeholder="College Name"  id="others" name="otherInstitution" required>
              </div>
            </div>
            <div class="form-row" style="margin-top:-60px">
              <div class="col-md-6 form-group">
                <label for="event1">Select Events</label>
-                 <select class="form-control" id="event1" name="event1">
+                 <select class="form-control" id="event1" name="event1" required>
                     <option>Event One</option>
                      <option>Kautuhal</option>
                      <option>Rocket Singh</option>
@@ -312,7 +312,7 @@
              </div>
              <div class="col-md-6 form-group">
 
-                 <select class="form-control " id="event2" style="margin-top: 30px" name="event2">
+                 <select class="form-control " id="event2" style="margin-top: 30px" name="event2" required>
                     <option>Event Two (Optional)</option>
                      <option>Kautuhal</option>
                      <option>Rocket Singh</option>
