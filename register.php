@@ -246,7 +246,7 @@
            <div class="form-row">
              <div class="col-md-12 form-group">
 
-               <label for="qualification">Qualification</label>
+               <label for="qualification">Institution</label>
                  <select class="form-control" id="qualification" name="qualification">
                      <option>Select One</option>
                      <option>KIIT</option>
