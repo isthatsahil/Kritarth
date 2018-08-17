@@ -144,7 +144,7 @@
 
 <header>
    <!--  NAVBAR -->
-   <nav class="navbar navbar-expand-lg fixed-top  navbar-light " id="nav">
+   <nav class="navbar navbar-expand-lg fixed-top  navbar-dark " id="nav">
       <div class="container">
         <a href="index.html" class="navbar-brand">
           <img src="img\kritarth white.png" alt="" width="180" height="60">
@@ -226,16 +226,12 @@
              <h3 class="text-center">Please fill out this form to register.</h3>
              <hr>
              <div class="row">
-               <div class="col-md-6">
+               <div class="col-md-12">
                  <div class="form-group">
-                   <input type="text" class="form-control" placeholder="First Name" name="firstName">
+                   <input type="text" class="form-control" placeholder="Full Name" name="fulltName">
                  </div>
                  </div>
-                 <div class="col-md-6">
-                   <div class="form-group">
-                     <input type="text" class="form-control" placeholder="Last Name" name="lastName">
-                   </div>
-               </div>
+
                <div class="col-md-6">
                  <div class="form-group">
                    <input type="email" class="form-control" placeholder="Email" name="email">
@@ -265,16 +261,16 @@
                <input type="text" class="form-control " style="display:none"  placeholder="Roll No."  id="roll" name="rollNumber">
              </div>
              <div class="col-lg-12 form-group">
-               <input type="text" class="form-control " style="display:none"  placeholder="School Name"  id="school" name="schoolName">
+               <input type="text" class="form-control " style="display:none;margin-top:-20px;margin-bottom:30px"  placeholder="School Name"  id="school" name="schoolName">
              </div>
              <div class="col-lg-12 form-group">
-               <input type="text" class="form-control " style="display:none"  placeholder="Institution Name"  id="corporate" name="corporateName">
+               <input type="text" class="form-control " style="display:none;margin-top:-30px;margin-bottom:50px"  placeholder="Institution Name"  id="corporate" name="corporateName">
              </div>
 
            </div>
-           <div class="form-row">
+           <div class="form-row" style="margin-top:-20px">
              <div class="col-md-12 form-group">
-                 <div id="college" style="display:none">
+                 <div id="college" style="display:none;margin-top:-30px;margin-bottom:50px">
                <label for="college">College</label>
                  <select class="form-control" id="myOptions"  name="institution">
                     <option>Select one</option>
@@ -295,10 +291,10 @@
                  </div>
              </div>
              <div class="col form-group" >
-               <input type="text" class="form-control " style="display:none"  placeholder="College Name"  id="others" name="otherInstitution">
+               <input type="text" class="form-control " style="display:none;margin-top:-50px;margin-bottom:50px"  placeholder="College Name"  id="others" name="otherInstitution">
              </div>
            </div>
-           <div class="form-row">
+           <div class="form-row" style="margin-top:-60px">
              <div class="col-md-6 form-group">
                <label for="event1">Select Events</label>
                  <select class="form-control" id="event1" name="event1">
@@ -332,8 +328,9 @@
 
            </div>
            <div class="form-row">
-             <div class="col-md-12 form-group">
-               <div class="g-recaptcha" data-sitekey="6Lc7bWoUAAAAAGeSiUsGbH7b-o6PwsslEH4Tefgx"></div>
+             <div class="col-md-12 form-group ">
+               <div class="g-recaptcha d-inline-block " style="margin-left:30%"   data-sitekey="6Lc7bWoUAAAAAGeSiUsGbH7b-o6PwsslEH4Tefgx"></div>
+               <!-- SECRET KEY :6Lc7bWoUAAAAAHgW_e7jg7Se0OeuLQcMr9FtU0-Z  -->
                </div>
              <div class="col-md-12 form-group">
                   <input type="submit" value="Submit" class="btn btn-outline-danger btn-block" name="regButton">
@@ -350,13 +347,13 @@
  <section id="end-footer">
 
    <div id="footer-social">
-    <a href="#" class="socio"><i class="fab fa-facebook-f"><span >Facebook</span></i></a>
-    <a href="#" class="socio"><i class="fab fa-twitter"><span>Twitter</span></i></a>
-    <a href="#" class="socio"><i class="fab fa-instagram"><span>Instagram</span></i></a>
+     <a href="https://www.facebook.com/kritarth.kiit/" target="_blank" class="socio"><i class="fab fa-facebook-f"><span >Facebook</span></i></a>
+     <a href="#" class="socio"><i class="fab fa-twitter"><span>Twitter</span></i></a>
+     <a href="#" class="socio"><i class="fab fa-instagram"><span>Instagram</span></i></a>
     </div>
 
     <div class="foo-content">
-      <p class="lead text-white text-center">Copyright <i class="far fa-copyright"></i> KRITARTH</p>
+      <p class="lead text-white text-center">Copyright &copy; KRITARTH</p>
     </div>
  </section>
 
@@ -399,6 +396,7 @@
      if(x=="KIIT"){
        console.log("hello");
        $('#roll').css("display","block");
+       $('#roll').css("margin-bottom","0");
 
        $('#school').css("display","none");
           $('#corporate').css("display","none");
@@ -457,6 +455,17 @@ window.addEventListener('load', function(){
   overlay.style.display = 'none';
 })
 
+$(document).ready(function() {
+      // Transition effect for navbar
+      $(window).scroll(function() {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if($(this).scrollTop() > 20) {
+            $('.navbar').addClass('solid');
+        } else {
+            $('.navbar').removeClass('solid');
+        }
+      });
+});
 
 
   </script>
