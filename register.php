@@ -228,7 +228,7 @@
              <div class="row">
                <div class="col-md-12">
                  <div class="form-group">
-                   <input type="text" class="form-control" placeholder="Full Name" name="fulltName" required>
+                   <input type="text" class="form-control" placeholder="Full Name" name="fullName" required>
                  </div>
                  </div>
 
@@ -342,6 +342,52 @@
      </div>
    </div>
  </section>
+         <?php
+
+         include_once 'php/connect.php';
+
+         if(isset($_POST['regButton'])){
+             $uFname = $_POST['fullName'];
+             $uPhone = $_POST['phoneNumber'];
+             $email = $_POST['email'];
+             $uInsti = $_POST['qualification'];
+                 if($uInsti=='KIIT'){
+                     $uInstiName = $_POST['rollNumber'];
+                 }
+             if($uInsti=='School student'){
+                 $uInstiName = $_POST['schoolName'];
+             }
+             if($uInsti=='Corporate'){
+                 $uInstiName = $_POST['corporateName'];
+             }
+             if($uInsti=='Others'){
+                 $uInstiName = $_POST['institution'];
+                 if($uInstiName=='Others'){
+                     $uInstiName=$_POST['otherInstitution'];
+                 }
+             }
+
+
+             if (mysqli_num_rows(mysqli_query($db,"SELECT * FROM `users` WHERE email = '$email'"))>0){
+                 $message = 'User Already Exists';
+                 echo "<script type='text/javascript'>alert('$message');window.location.href = 'register.php';</script>";
+             }
+             else{
+
+                 $insertUserSql= "INSERT INTO `users`(`uName`, `uEmail`, `uPhone`, `uInsti`,`uInstiName`,`uEventone`,`uEventsecond`) VALUES
+
+        ('$uFname','$uLname','$email','$upwd')";
+
+                 $result = mysqli_query($db, $insertUserSql);
+                 if($result){
+                     session_start();
+                     $_SESSION['user_id'] =$email ;
+                     header('location:../index.php');
+                 }}
+         }
+
+         ?>
+
 
 
  <section id="end-footer">
