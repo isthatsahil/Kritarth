@@ -16,6 +16,9 @@ body{
   width: 100vw;
   height: 100vh;
 }
+section{
+  width: 100%;
+}
 
 
 /*    N A V B A R       S E C T I O N    */
@@ -226,4 +229,10 @@ content:'\f17d';
 }
   .socio:nth-of-type(6):before {
 content:'\f1cb';
+}
+@media (max-width:728px) {
+  body{
+    overflow-x: hidden;
+    width: 100%;
+  }
 }

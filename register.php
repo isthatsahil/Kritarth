@@ -17,7 +17,7 @@
 
 
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
-
+       <script src='https://www.google.com/recaptcha/api.js'></script>
 
      <!--   L  O C A L     C S S     -->
 <link rel="stylesheet" href="css\register.css">
@@ -54,10 +54,9 @@
     </header>
     <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="register.php">Register</a>
+  
 </div>
 
   <!-- Go to Top Button -->
@@ -89,7 +88,7 @@
      <div class="row">
        <div class="col-lg-12">
          <div class="form-header my-4">
-           <h1 class="display-3 text-center">Register Here</h1>
+           <h1 class="display-3 text-center" style="  font-family: 'Dosis', sans-serif">Register Here</h1>
          </div>
        </div>
      </div>
@@ -134,7 +133,7 @@
              </div>
              <div class="col-md-6">
                <div class="form-group">
-                 <input type="number" class="form-control" placeholder="Phone Number" name="phoneNumber">
+                 <input type="text" class="form-control" placeholder="Phone Number" name="phoneNumber">
                </div>
            </div>
            </div>
@@ -142,27 +141,34 @@
              <div class="col-md-12 form-group">
 
                <label for="qualification">Qualification</label>
-                 <select class="form-control" id="qualification" onchange="myFunction()" name="qualification">
+                 <select class="form-control" id="qualification" name="qualification">
                      <option>Select One</option>
-                     <option>College</option>
-                     <option>Student</option>
+                     <option>KIIT</option>
+                     <option>School student</option>
                      <option>Corporate</option>
                      <option>Others</option>
                 </select>
 
 
              </div>
-             <div class="col form-group">
-               <input type="text" class="form-control" placeholder="Fees" id="fees" readonly name="fee">
+             <div class="col-lg-12 form-group">
+               <input type="text" class="form-control " style="display:none"  placeholder="Roll No."  id="roll" name="rollNumber">
              </div>
+             <div class="col-lg-12 form-group">
+               <input type="text" class="form-control " style="display:none"  placeholder="School Name"  id="school" name="schoolName">
+             </div>
+             <div class="col-lg-12 form-group">
+               <input type="text" class="form-control " style="display:none"  placeholder="Institution Name"  id="corporate" name="corporateName">
+             </div>
+
            </div>
            <div class="form-row">
              <div class="col-md-12 form-group">
-
-               <label for="college">Institution</label>
+                 <div id="college" style="display:none">
+               <label for="college">College</label>
                  <select class="form-control" id="myOptions"  name="institution">
                     <option>Select one</option>
-                     <option>Kalinga Institute of Industrial Technology</option>
+
                      <option>Institute of Management And Information Science</option>
                       <option>Silicon Institute of Technology</option>
                        <option>Trident Academy of Technology</option>
@@ -176,9 +182,10 @@
                               <option >Others</option>
 
                  </select>
+                 </div>
              </div>
              <div class="col form-group" >
-               <input type="text" class="form-control " style="display:none"  placeholder="Institution/School Name"  id="others" name="otherInstitution">
+               <input type="text" class="form-control " style="display:none"  placeholder="College Name"  id="others" name="otherInstitution">
              </div>
            </div>
            <div class="form-row">
@@ -215,6 +222,9 @@
 
            </div>
            <div class="form-row">
+             <div class="col-md-12 form-group">
+               <div class="g-recaptcha" data-sitekey="6Lc7bWoUAAAAAGeSiUsGbH7b-o6PwsslEH4Tefgx"></div>
+               </div>
              <div class="col-md-12 form-group">
                   <input type="submit" value="Submit" class="btn btn-outline-danger btn-block" name="regButton">
              </div>
@@ -261,24 +271,51 @@
       }
     });
 
-    function myFunction() {
-     var x = document.getElementById("qualification").value;
-     console.log(x);
-     if(x=='College'){
-       document.getElementById("fees").value = "200/- ";
-       console.log("Yes");
-     }
-     else if (x=='Student') {
-       document.getElementById("fees").value = "150/- ";
-     }
-     else if (x=='Corporate') {
-         document.getElementById("fees").value = "300/- ";
-     }
-     else if (x=='Others') {
-       document.getElementById("fees").value = "250/- ";
-     }
+    $('#qualification').change(function() {
 
- }
+     var x = $("#qualification option:selected").text();
+     if(x=="KIIT"){
+       console.log("hello");
+       $('#roll').css("display","block");
+
+       $('#school').css("display","none");
+          $('#corporate').css("display","none");
+           $('#college').css("display","none");
+             $('#others').css("display","none");
+     }
+     else if (x=="School student") {
+       $('#school').css("display","block");
+       $('#roll').css("display","none");
+
+          $('#corporate').css("display","none");
+           $('#college').css("display","none");
+             $('#others').css("display","none");
+     }
+     else if (x=="Corporate") {
+       $('#corporate').css("display","block");
+       $('#roll').css("display","none");
+       $('#school').css("display","none");
+
+           $('#college').css("display","none");
+             $('#others').css("display","none");
+     }
+     else if (x=="Others") {
+       $('#college').css("display","block");
+       $('#roll').css("display","none");
+       $('#school').css("display","none");
+          $('#corporate').css("display","none");
+            $('#others').css("display","none");
+
+     }
+     else{
+       console.log("bye");
+       $('#roll').css("display","none");
+       $('#school').css("display","none");
+          $('#corporate').css("display","none");
+           $('#college').css("display","none");
+             $('#others').css("display","none");
+     }
+});
  $('#myOptions').change(function() {
    console.log("hello");
   var val = $("#myOptions option:selected").text();
