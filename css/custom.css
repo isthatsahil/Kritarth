@@ -1,0 +1,135 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+
+}
+.hidden {
+  display: none;
+}
+
+#spring-text {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+section{
+  width: 100%;
+}
+
+
+/*    N A V B A R       S E C T I O N    */
+  .navbar.solid {
+  background-color: #000019;
+  transition: background-color 0.3s ease 0s;
+  box-shadow: 0 0 4px grey; }
+
+.navbar .nav-item {
+  padding-right: 1.4rem; }
+
+
+
+  /*   C O U N T E R     S E C T I O N     */
+  .mt-50 {
+    margin-top: 70px; }
+
+
+
+
+  #myCarousel{
+    width: 100%;
+    height: 100vh;
+
+  }
+  .carousel-inner img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+
+
+
+  /*    A B O U T     S E C T I O N     */
+  #about {
+    width: 100%;
+    height: auto; }
+    #about .about-header h2 {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 80px;
+      width: 50%;
+       }
+
+
+      .para-content{
+
+        width: 60%;
+        margin-left: auto;
+        margin-right:  auto;
+      font-size: 1.15rem;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.1rem;
+
+      }
+
+
+      /*    G A L L E R Y     S E C T I O N   */
+
+       .pb-60{
+         padding-bottom: 60px;
+       }
+       .mt-20{
+         margin-top: 20px;
+       }
+
+        #gallery{
+          width: 100%;
+          height: auto;
+        }
+        #gallery-header{
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+
+          margin-top: 80px;
+        font-family: 'Dosis', sans-serif;
+
+        }
+        #gallery-header span{
+          font-weight: lighter;
+          font-size: 3rem;
+            letter-spacing: 0.25rem;
+        }
+          #gallery-header b{
+            font-size: 3rem;
+          }
+
+        #gallery-sub{
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+
+        #main-footer{
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+          background: #8E0E00;  /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to left, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        }
+
+      
+@media (max-width:728px) {
+  body{
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
