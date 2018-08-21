@@ -348,7 +348,19 @@
 
          if(isset($_POST['regButton'])){
              $uFname = $_POST['fullName'];
-             $uPhone = $_POST['phoneNumber'];
+             $filter = '/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/';
+             if(!preg_match($filter, $_POST['phoneNumber']))
+             {
+                 $error ="Enter a valid contact no. of 10 digits";
+                 echo "<script type='text/javascript'>alert('$error');window.location.href = '/register.php';</script>";
+             }else{
+                 $uPhone = $_POST['phoneNumber'];
+             }
+             if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                 $email = $_POST['email'];
+             } else {$error ="Enter a valid email";
+                     echo "<script type='text/javascript'>alert('$error');window.location.href = '/register.php';</script>";
+             }
              $email = $_POST['email'];
              $uInsti = $_POST['qualification'];
                  if($uInsti=='KIIT'){
