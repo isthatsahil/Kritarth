@@ -394,7 +394,7 @@
                  if($result){
                      session_start();
                      $_SESSION['user_id'] =$email ;
-                     header('location:../index.php');
+                     header('location:../index.html');
                  }}
          }
 
