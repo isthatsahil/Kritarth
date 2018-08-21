@@ -218,7 +218,7 @@
          </div>
        </div>
        <div class="col-md-8">
-         <form class="" action="index.html" method="post">
+         <form class="" action="" method="post">
 
 
          <div class="card p-4" id="reg-on">
@@ -312,7 +312,7 @@
              </div>
              <div class="col-md-6 form-group">
 
-                 <select class="form-control " id="event2" style="margin-top: 30px" name="event2" required>
+                 <select class="form-control " id="event2" style="margin-top: 30px" name="event2">
                     <option>Event Two (Optional)</option>
                      <option>Kautuhal</option>
                      <option>Rocket Singh</option>
@@ -333,7 +333,7 @@
                <!-- SECRET KEY :6Lc7bWoUAAAAAHgW_e7jg7Se0OeuLQcMr9FtU0-Z  -->
                </div>
              <div class="col-md-12 form-group">
-                  <input type="submit" value="Submit" class="btn btn-outline-danger btn-block" name="regButton">
+                  <input type="submit" value="submit" id="regButton" class="btn btn-outline-danger btn-block" name="regButton">
              </div>
            </div>
          </div>
@@ -347,21 +347,29 @@
          include_once 'php/connect.php';
 
          if(isset($_POST['regButton'])){
-             $uFname = $_POST['fullName'];
+
+             if (!($_POST['fullName'])||(empty($_POST['fullName']))) {
+                 $error = "Enter your name";
+                 echo "<script type='text/javascript'>alert('$error');</script>";
+             }
+             else{
+                 $uFname = $_POST['fullName'];
+                 echo $uFname;
+             }
              $filter = '/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/';
              if(!preg_match($filter, $_POST['phoneNumber']))
              {
                  $error ="Enter a valid contact no. of 10 digits";
-                 echo "<script type='text/javascript'>alert('$error');window.location.href = '/register.php';</script>";
+                 echo "<script type='text/javascript'>alert('$error');</script>";
              }else{
                  $uPhone = $_POST['phoneNumber'];
              }
              if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                  $email = $_POST['email'];
              } else {$error ="Enter a valid email";
-                     echo "<script type='text/javascript'>alert('$error');window.location.href = '/register.php';</script>";
+                     echo "<script type='text/javascript'>alert('$error');</script>";
              }
-             $email = $_POST['email'];
+            // $email = $_POST['email'];
              $uInsti = $_POST['qualification'];
                  if($uInsti=='KIIT'){
                      $uInstiName = $_POST['rollNumber'];
@@ -378,23 +386,30 @@
                      $uInstiName=$_POST['otherInstitution'];
                  }
              }
-
+            $event_1=$_POST['event1'];
+             if($event_1='Event One'){
+                 $message = 'Please select An event';
+                 echo "<script type='text/javascript'>alert('$message');</script>";
+             }
+             $event_2=$_POST['event2'];
+             if($event_2='Event Two (Optional)'){
+                 $event_2='';
+             }
 
              if (mysqli_num_rows(mysqli_query($db,"SELECT * FROM `users` WHERE email = '$email'"))>0){
                  $message = 'User Already Exists';
-                 echo "<script type='text/javascript'>alert('$message');window.location.href = 'register.php';</script>";
+                 echo "<script type='text/javascript'>alert('$message');</script>";
              }
              else{
 
-                 $insertUserSql= "INSERT INTO `users`(`uName`, `uEmail`, `uPhone`, `uInsti`,`uInstiName`,`uEventone`,`uEventsecond`) VALUES
+                 $insertUserSql= "INSERT INTO `users`(`f_name`, `e_mail`, `phone_number`, `institution`,`institution_name`,`event_1`,`event_2`) VALUES
 
-        ('$uFname','$uLname','$email','$upwd')";
-
+        ('$uFname','$email','$uPhone','$uInsti','$uInstiName','$event_1','$event_2')";
+                 echo $insertUserSql;
                  $result = mysqli_query($db, $insertUserSql);
                  if($result){
                      session_start();
-                     $_SESSION['user_id'] =$email ;
-                     header('location:../index.html');
+                     header('location:index.html');
                  }}
          }
 
