@@ -39,9 +39,9 @@ section{
  }
 
  .ksac img{
-   height: 79px;
+   height: 60px;
    margin-left: 40px;
-width: 120px;
+width: 100px;
  }
  @media (max-width:564px) {
    .ksac {
