@@ -60,8 +60,8 @@
   </div>
 
 
- <header>
-      <!--  NAVBAR -->
+ <header >
+      <!--  NAVBAR
       <nav class="navbar navbar-expand-lg    navbar-dark  py-2" id="nav">
          <div class="container">
            <a href="index.html" class="navbar-brand">
@@ -90,16 +90,24 @@
 
              <li class="nav-item">
                <a href="register.php" class="nav-link text-white"><i class="far fa-user  mr-1"></i>Register</a>
-             </li>-->
+             </li>
 
            </ul>
 
              </div>
-       </nav>
+       </nav>-->
+       <div class="row">
+         <div class="col-md-4 p-5">
+            <img src="img\KIIT New Logo (Green- C-100, Y- 100) final.png" alt="" width="180" height="60">
+         </div>
+         <div class="col-md-4 mr-0 ml-auto  mt-4" >
+             <img src="img\ksac logo.png" alt="" width="100" height="80"  class="ksac">
+         </div>
+       </div>
+
 </header>
 
-
-<section id="myCarousel">
+<section id="myCarousel" class="fade-scroll">
 
 
 
@@ -134,9 +142,7 @@
                <div id="title-desktop" class="hidden">K r i t a r t h  2 0 1 8</div>
               <div id="title-mobile" class="hidden">Kritarth 2018</div>
               <canvas id="spring-text"></canvas>
-           <div class="ksac ">
-               <img src="img\ksac logo.png" alt="" style="height:90px;width:150px"  >
-           </div>
+
              </div>
 
            </div>
@@ -145,7 +151,7 @@
 
 
 <!--  NAVBAR -->
-<nav class="navbar navbar-expand-lg sticky-top   navbar-dark  py-2" id="nav">
+<nav class="navbar navbar-expand-lg sticky-top   navbar-dark  py-2" id="scroll-nav">
    <div class="container">
      <a href="index.html" class="navbar-brand">
        <img src="img\kritarth white.png" alt="" width="180" height="60">
@@ -682,6 +688,47 @@ Giving is not just about making a donation but making a difference and we want y
 
 });
 
+
+//Fade
+$(function() {
+
+               var documentEl = $(document),
+                   fadeElem = $('.fade-scroll');
+
+
+               documentEl.on('scroll', function() {
+                   var currScrollPos = documentEl.scrollTop();
+
+                   fadeElem.each(function() {
+                       var $this = $(this),
+                           elemOffsetTop = $this.offset().top;
+                       if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
+                   });
+               });
+
+           });
+           // When the user scrolls down 20px from the top of the document, slide down the navbar
+     window.onscroll = function() {scrollFunction()};
+
+     function scrollFunction() {
+         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+             document.getElementById("scroll-nav").style.top = "0";
+         } else {
+             document.getElementById("scroll-nav").style.top = "-90px";
+         }
+     }
+//visible
+var isVisible = false;
+$(window).scroll(function(){
+     var shouldBeVisible = $(window).scrollTop()>410;
+     if (shouldBeVisible && !isVisible) {
+          isVisible = true;
+          $('#scroll-nav').show();
+     } else if (isVisible && !shouldBeVisible) {
+          isVisible = false;
+          $('#scroll-nav').hide();
+    }
+});
 
 
 
