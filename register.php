@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -119,7 +118,6 @@
 
 </style>
 </head>
- </head>
  <body>
    <!--  P R E L O A D E R   -->
    <div class="loaders" id="loaders-box">
@@ -218,11 +216,16 @@
          </div>
        </div>
        <div class="col-md-8">
-         <form class="" action="" method="post">
+
+
+
 
 
          <div class="card p-4" id="reg-on">
+
            <div class="card-body">
+               <form method="post" action="" >
+               <fieldset>
              <h3 class="text-center">Please fill out this form to register.</h3>
              <hr>
              <div class="row">
@@ -260,7 +263,7 @@
              <div class="col-lg-12 form-group">
                <input type="text" class="form-control " style="display:none"  placeholder="Roll No."  id="roll" name="rollNumber" required>
              </div>
-             <div class="col-lg-12 form-group">
+            <!-- <div class="col-lg-12 form-group">
                <input type="text" class="form-control " style="display:none;margin-top:-20px;margin-bottom:30px"  placeholder="School Name"  id="school" name="schoolName" required>
              </div>
              <div class="col-lg-12 form-group">
@@ -293,7 +296,7 @@
              <div class="col form-group" >
                <input type="text" class="form-control " style="display:none;margin-top:-50px;margin-bottom:50px"  placeholder="College Name"  id="others" name="otherInstitution" required>
              </div>
-           </div>
+</div>-->
            <div class="form-row" style="margin-top:-60px">
              <div class="col-md-6 form-group">
                <label for="event1">Select Events</label>
@@ -328,92 +331,100 @@
 
            </div>
            <div class="form-row">
-             <div class="col-md-12 form-group ">
+             <div class="col-md-12">
                <div class="g-recaptcha d-inline-block " style="margin-left:30%"   data-sitekey="6Lc7bWoUAAAAAGeSiUsGbH7b-o6PwsslEH4Tefgx"></div>
                <!-- SECRET KEY :6Lc7bWoUAAAAAHgW_e7jg7Se0OeuLQcMr9FtU0-Z  -->
-               </div>
-             <div class="col-md-12 form-group">
-                  <input type="submit" value="submit" id="regButton" class="btn btn-outline-danger btn-block" name="regButton">
-             </div>
-           </div>
-         </div>
-       </div>
-       </form>
-     </div>
-   </div>
- </section>
-         <?php
+               </div></div>
+               <div class="form-group">
+                <div class="col-md-12">
+                 <button type = "submit" class="btn btn-outline-danger btn-block" name= "regButton">SUBMIT</button>
+                   </div></div>
+                   </fieldset>
+               </form>
 
-         include_once 'php/connect.php';
+               <?php
 
-         if(isset($_POST['regButton'])){
+               include_once 'php/connect.php';
+               echo 'IN PHP';
 
-             if (!($_POST['fullName'])||(empty($_POST['fullName']))) {
-                 $error = "Enter your name";
-                 echo "<script type='text/javascript'>alert('$error');</script>";
-             }
-             else{
-                 $uFname = $_POST['fullName'];
-                 echo $uFname;
-             }
-             $filter = '/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/';
-             if(!preg_match($filter, $_POST['phoneNumber']))
-             {
-                 $error ="Enter a valid contact no. of 10 digits";
-                 echo "<script type='text/javascript'>alert('$error');</script>";
-             }else{
-                 $uPhone = $_POST['phoneNumber'];
-             }
-             if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                 $email = $_POST['email'];
-             } else {$error ="Enter a valid email";
-                     echo "<script type='text/javascript'>alert('$error');</script>";
-             }
-            // $email = $_POST['email'];
-             $uInsti = $_POST['qualification'];
-                 if($uInsti=='KIIT'){
-                     $uInstiName = $_POST['rollNumber'];
-                 }
-             if($uInsti=='School student'){
-                 $uInstiName = $_POST['schoolName'];
-             }
-             if($uInsti=='Corporate'){
-                 $uInstiName = $_POST['corporateName'];
-             }
-             if($uInsti=='Others'){
-                 $uInstiName = $_POST['institution'];
-                 if($uInstiName=='Others'){
-                     $uInstiName=$_POST['otherInstitution'];
-                 }
-             }
-            $event_1=$_POST['event1'];
-             if($event_1='Event One'){
-                 $message = 'Please select An event';
-                 echo "<script type='text/javascript'>alert('$message');</script>";
-             }
-             $event_2=$_POST['event2'];
-             if($event_2='Event Two (Optional)'){
-                 $event_2='';
-             }
+               if(isset($_POST['regButton'])){
+                   //echo 'in php2';
+                   if (!($_POST['fullName'])||(empty($_POST['fullName']))) {
+                       $error = "Enter your name";
+                       echo "<script type='text/javascript'>alert('$error');</script>";
+                   }
+                   else{
+                       $uFname = $_POST['fullName'];
+                       //echo $uFname;
+                   }
+                   $filter = '/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/';
+                   if(!preg_match($filter, $_POST['phoneNumber']))
+                   {
+                       $error ="Enter a valid contact no. of 10 digits";
+                       echo "<script type='text/javascript'>alert('$error');</script>";
+                   }else{
+                       $uPhone = $_POST['phoneNumber'];
+                   }
+                   if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                       $email = $_POST['email'];
+                   } else {$error ="Enter a valid email";
+                           echo "<script type='text/javascript'>alert('$error');</script>";
+                          }
+                   // $email = $_POST['email'];
+                   $uInsti = $_POST['qualification'];
+                   if($uInsti=='KIIT'){
+                       $uInstiName = $_POST['rollNumber'];
+                   }
+                   if($uInsti=='School student'){
+                       $uInstiName = $_POST['schoolName'];
+                   }
+                   if($uInsti=='Corporate'){
+                       $uInstiName = $_POST['corporateName'];
+                   }
+                   if($uInsti=='Others'){
+                       $uInstiName = $_POST['institution'];
+                       if($uInstiName=='Others'){
+                           $uInstiName=$_POST['otherInstitution'];
+                       }
+                   }
+                   $event_1=$_POST['event1'];
+                   if($event_1=='Event One'){
+                       $message = 'Please select An event';
+                       echo "<script type='text/javascript'>alert('$message');</script>";
+                   }else{}
+                   $event_2=$_POST['event2'];
+                   if($event_2=='Event Two (Optional)'){
+                       $event_2='';
+                   }
 
-             if (mysqli_num_rows(mysqli_query($db,"SELECT * FROM `users` WHERE email = '$email'"))>0){
-                 $message = 'User Already Exists';
-                 echo "<script type='text/javascript'>alert('$message');</script>";
-             }
-             else{
+                   if (mysqli_num_rows(mysqli_query($db,"SELECT * FROM `users` WHERE e_mail = '$email'"))>0){
+                       $message = 'User Already Exists';
+                       echo "<script type='text/javascript'>alert('$message');</script>";
+                   }
+                   else{
 
-                 $insertUserSql= "INSERT INTO `users`(`f_name`, `e_mail`, `phone_number`, `institution`,`institution_name`,`event_1`,`event_2`) VALUES
+                       $insertUserSql= "INSERT INTO `users`(`f_name`, `e_mail`, `phone_number`, `institution`,`institution_name`,`event_1`,`event_2`) VALUES
 
         ('$uFname','$email','$uPhone','$uInsti','$uInstiName','$event_1','$event_2')";
-                 echo $insertUserSql;
-                 $result = mysqli_query($db, $insertUserSql);
-                 if($result){
-                     session_start();
-                     header('location:index.html');
-                 }}
-         }
+                      // echo $insertUserSql;
+                       $result = mysqli_query($db, $insertUserSql);
+                       if($result){
+                           session_start();
+                           header('location:index.html');
+                       }}
+               }
 
-         ?>
+
+               ?>
+
+         </div>
+
+       </div>
+
+     </div>
+   </div>
+         </div></section>
+
 
 
 
