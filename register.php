@@ -261,40 +261,17 @@
              <div class="col-lg-12 form-group">
                <input type="text" class="form-control " style="display:none"  placeholder="Roll No."  id="roll" name="rollNumber" required>
              </div>
-           <!-- <div class="col-lg-12 form-group">
+           <div class="col-lg-12 form-group">
                <input type="text" class="form-control " style="display:none;margin-top:-20px;margin-bottom:30px"  placeholder="School Name"  id="school" name="schoolName" required>
              </div>
              <div class="col-lg-12 form-group">
                <input type="text" class="form-control " style="display:none;margin-top:-30px;margin-bottom:50px"  placeholder="Institution Name"  id="corporate" name="corporateName" required>
              </div>
-
-           </div>
-           <div class="form-row" style="margin-top:-20px">
-             <div class="col-md-12 form-group">
-                 <div id="college" style="display:none;margin-top:-30px;margin-bottom:50px">
-               <label for="college">College</label>
-                 <select class="form-control" id="myOptions"  name="institution" required>
-                    <option>Select one</option>
-
-                     <option>Institute of Management And Information Science</option>
-                      <option>Silicon Institute of Technology</option>
-                       <option>Trident Academy of Technology</option>
-                       <option>Amity College of Engineering</option>
-                        <option>Arya School of Management & Information Technology</option>
-                         <option>C. V. Raman College of Engineering</option>
-                          <option>Institute of Management And Advance Global Excellence </option>
-                           <option>Indian Institute of Science & Information Technology</option>
-                            <option>Xavier Institute of Management </option>
-                             <option>ITER SOA Unsiversity</option>
-                              <option >Others</option>
-
-                 </select>
-                 </div>
-             </div>
              <div class="col form-group" >
-               <input type="text" class="form-control " style="display:none;margin-top:-50px;margin-bottom:50px"  placeholder="College Name"  id="others" name="otherInstitution" required>
+               <input type="text" class="form-control " style="display:none;margin-top:-50px;margin-bottom:50px"  placeholder="College Name" id="college"  required>
              </div>
-</div>-->
+           </div>
+
            <div class="form-row" style="margin-top:-60px">
              <div class="col-md-6 form-group">
                <label for="event1">Select Events</label>
