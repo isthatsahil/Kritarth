@@ -384,10 +384,7 @@
         ('$uFname','$email','$uPhone','$uInsti','$uInstiName','$event_1','$event_2')";
                       // echo $insertUserSql;
                        $result = mysqli_query($db, $insertUserSql);
-                       if($result){
-                           session_start();
-                           header('location:index.html');
-                       }}
+                      }
                }
 
 
