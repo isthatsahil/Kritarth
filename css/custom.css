@@ -2,6 +2,7 @@ body{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  width: 100%;
 
 
 }
@@ -20,7 +21,47 @@ section{
   width: 100%;
 }
 
+ .ksac {
 
+
+    position: absolute;
+    top: 70%;
+    right: 0;
+    width: 20%;
+    margin-right: 20px;
+
+    height: auto;
+    border-left: 2px solid #fff;
+
+     background-color:#fff;
+     opacity: 0.4;
+
+ }
+
+ .ksac img{
+   height: 60px;
+   margin-left: 40px;
+width: 100px;
+ }
+ @media (max-width:564px) {
+   .ksac {
+
+     position: absolute;
+     top: 70%;
+     left:  30%;
+     width:auto;
+     height: auto;
+
+   }
+   .kiit{
+
+     width:auto;
+     height: auto;
+
+      background-color: rgba(0,0,0,0.7);
+   }
+
+ }
 /*    N A V B A R       S E C T I O N    */
   .navbar.solid {
   background-color: #000019;
@@ -126,7 +167,7 @@ section{
 
         }
 
-      
+
 @media (max-width:728px) {
   body{
     overflow-x: hidden;

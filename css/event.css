@@ -2,6 +2,7 @@ body{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  width: 100%;
 background: #141E30; /* fallback for old browsers */
 
 }
@@ -160,3 +161,12 @@ background: linear-gradient(to right, #E1F5C4, #EDE574); /* W3C, IE 10+/ Edge, F
     font-weight: bold;
     letter-spacing: 0.2rem;
   }
+
+  /*  MAP */
+
+   @media (max-width:768px) {
+     .maps{
+       width: 720px;
+       height: auto;
+     }
+   }
