@@ -259,9 +259,9 @@
 
              </div>
              <div class="col-lg-12 form-group">
-               <input type="text" class="form-control " style="display:none"  placeholder="Roll No."  id="roll" name="rollNumber" required>
+                 <input type="text" class="form-control " style="display:none; margin-top:-10px;margin-bottom:60px"  placeholder="Roll No."  id="roll" name="rollNumber" required>
              </div>
-           <div class="col-lg-12 form-group">
+          <!-- <div class="col-lg-12 form-group">
                <input type="text" class="form-control " style="display:none;margin-top:-20px;margin-bottom:30px"  placeholder="School Name"  id="school" name="schoolName" required>
              </div>
              <div class="col-lg-12 form-group">
@@ -269,10 +269,10 @@
              </div>
              <div class="col form-group" >
                <input type="text" class="form-control " style="display:none;margin-top:-50px;margin-bottom:50px"  placeholder="College Name" id="college"  required>
-             </div>
+             </div>-->
            </div>
 
-           <div class="form-row" style="margin-top:-60px">
+           <div class="form-row" style="margin-top:-10px">
              <div class="col-md-6 form-group">
                <label for="event1">Select Events</label>
                  <select class="form-control" id="event1" name="event1" required>
@@ -456,35 +456,53 @@
      if(x=="KIIT"){
        console.log("hello");
        $('#roll').css("display","block");
+        var pc= document.getElementById('roll');
+        pc.value='';
+         pc.placeholder='Roll No.';
        $('#roll').css("margin-bottom","0");
 
-       $('#school').css("display","none");
+      /* $('#school').css("display","none");
           $('#corporate').css("display","none");
            $('#college').css("display","none");
-             $('#others').css("display","none");
+             $('#others').css("display","none");*/
      }
      else if (x=="School student") {
-       $('#school').css("display","block");
+       /*$('#school').css("display","block");
        $('#roll').css("display","none");
 
           $('#corporate').css("display","none");
            $('#college').css("display","none");
-             $('#others').css("display","none");
+             $('#others').css("display","none");*/
+         $('#roll').css("display","block");
+         var pc= document.getElementById('roll');
+         pc.value='';
+         pc.placeholder='School Name';
+         $('#roll').css("margin-bottom","0");
      }
      else if (x=="Corporate") {
-       $('#corporate').css("display","block");
+     /*  $('#corporate').css("display","block");
        $('#roll').css("display","none");
        $('#school').css("display","none");
 
            $('#college').css("display","none");
-             $('#others').css("display","none");
+             $('#others').css("display","none");*/
+         $('#roll').css("display","block");
+         var pc= document.getElementById('roll');
+         pc.value='';
+         pc.placeholder='Institution Name';
+         $('#roll').css("margin-bottom","0");
      }
-     else if (x=="Others") {
+     else if (x=="Others") {/*
        $('#college').css("display","block");
        $('#roll').css("display","none");
        $('#school').css("display","none");
           $('#corporate').css("display","none");
-            $('#others').css("display","none");
+            $('#others').css("display","none");*/
+         $('#roll').css("display","block");
+         var pc= document.getElementById('roll');
+         pc.value='';
+         pc.placeholder='College Name';
+         $('#roll').css("margin-bottom","0");
 
      }
      else{
