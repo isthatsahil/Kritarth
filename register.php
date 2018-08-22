@@ -216,13 +216,7 @@
          </div>
        </div>
        <div class="col-md-8">
-<<<<<<< HEAD
 
-
-
-=======
-
->>>>>>> origin/master
 
 
          <div class="card p-4" id="reg-on">
@@ -267,7 +261,7 @@
              <div class="col-lg-12 form-group">
                <input type="text" class="form-control " style="display:none"  placeholder="Roll No."  id="roll" name="rollNumber" required>
              </div>
-            <!-- <div class="col-lg-12 form-group">
+           <!-- <div class="col-lg-12 form-group">
                <input type="text" class="form-control " style="display:none;margin-top:-20px;margin-bottom:30px"  placeholder="School Name"  id="school" name="schoolName" required>
              </div>
              <div class="col-lg-12 form-group">
@@ -335,13 +329,9 @@
 
            </div>
            <div class="form-row">
-<<<<<<< HEAD
-             <div class="col-md-12">
-               <div class="g-recaptcha d-inline-block " style="margin-left:30%"   data-sitekey="6Lc7bWoUAAAAAGeSiUsGbH7b-o6PwsslEH4Tefgx"></div>
-=======
+
              <div class="col-md-12 form-group ">
                <div class="g-recaptcha d-inline-block cap"   data-sitekey="6Lc7bWoUAAAAAGeSiUsGbH7b-o6PwsslEH4Tefgx"></div>
->>>>>>> origin/master
                <!-- SECRET KEY :6Lc7bWoUAAAAAHgW_e7jg7Se0OeuLQcMr9FtU0-Z  -->
                </div></div>
                <div class="form-group">
